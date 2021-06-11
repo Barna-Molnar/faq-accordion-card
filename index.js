@@ -11,9 +11,9 @@ questionBtn.forEach((btn) => {
     btn.addEventListener('click', function () {
 
         const closestItem = btn.closest('.question__item')
+        const closestAnswer = document.querySelector('collapse')
+        console.log(closestAnswer)
         btn.firstElementChild.classList.toggle('rotate')
-
-
         closestItem.classList.toggle('height')
         btn.classList.toggle('btnActive')
 
