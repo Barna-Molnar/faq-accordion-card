@@ -1,8 +1,8 @@
-console.log('something')
+
 const questionBtn = document.querySelectorAll('.question__item__question')
-// var element = document.querySelector(' … ');
-const questionItem = document.querySelector('.question__item')
-const answer = document.querySelectorAll('.question__item__answer')
+// const questionItem = document.querySelector('.question__item')
+// const answer = document.querySelectorAll('.question__item__answer')
+const arrow = document.querySelector('.arrow')
 
 
 
@@ -11,10 +11,11 @@ questionBtn.forEach((btn) => {
     btn.addEventListener('click', function () {
 
         const closestItem = btn.closest('.question__item')
-        const cloestAnswer = btn.closest('.collapse')
+        btn.firstElementChild.classList.toggle('rotate')
+
+
         closestItem.classList.toggle('height')
         btn.classList.toggle('btnActive')
-        // btn.style.color = 'red'
 
     })
 })
